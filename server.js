@@ -8,39 +8,39 @@ app.use('/api/contacts',require("./routes/ContactsRoutes.js"))
 app.get('/', (req, res) => {
     res.json({
         "routes": [
-          {
-            "method": "GET",
-            "path": "/",
-            "description": "Get all contacts",
-            "handler": "getAllContacts"
-          },
-          {
-            "method": "GET",
-            "path": "/:id",
-            "description": "Get one contact",
-            "handler": "getOneContact"
-          },
-          {
-            "method": "POST",
-            "path": "/",
-            "description": "Create contact",
-            "handler": "createContact"
-          },
-          {
-            "method": "PUT",
-            "path": "/:id",
-            "description": "Update contact",
-            "handler": "updateContact"
-          },
-          {
-            "method": "DELETE",
-            "path": "/:id",
-            "description": "Delete contact",
-            "handler": "deleteContact"
-          }
+            {
+                "method": "GET",
+                "path": "/",
+                "description": "Get all contacts",
+                "handler": "getAllContacts"
+            },
+            {
+                "method": "GET",
+                "path": "/:id",
+                "description": "Get one contact",
+                "handler": "getOneContact"
+            },
+            {
+                "method": "POST",
+                "path": "/",
+                "description": "Create contact",
+                "handler": "createContact"
+            },
+            {
+                "method": "PUT",
+                "path": "/:id",
+                "description": "Update contact",
+                "handler": "updateContact"
+            },
+            {
+                "method": "DELETE",
+                "path": "/:id",
+                "description": "Delete contact",
+                "handler": "deleteContact"
+            }
         ]
-      }
-      );
+    });
+
   });
 
 app.listen(port,()=>{
