@@ -4,8 +4,8 @@ const dotenv = require('dotenv').config()
 const port = process.env.port;
 
 
-// app.use('/api/contacts',require("./routes/ContactsRoutes.js"))
-app.use('/',require("./routes/ContactsRoutes.js"))
+app.use('/api/contacts',require("./routes/ContactsRoutes.js"))
+
 
 app.listen(port,()=>{
     console.log(`Listening at ${port}`)
