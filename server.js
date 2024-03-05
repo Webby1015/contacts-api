@@ -3,9 +3,8 @@ const app = express();
 const dotenv = require('dotenv').config()
 const port = process.env.port;
 
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-});
+app.use('/api/contacts',require("./routes/ContactsRoutes.js"))
+
 
 
 app.listen(port,()=>{
