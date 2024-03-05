@@ -3,7 +3,10 @@ const app = express();
 const dotenv = require('dotenv').config()
 const port = process.env.port;
 
-app.use('/api/contacts',require("./routes/ContactsRoutes.js"))
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
 
 app.listen(port,()=>{
     console.log(`Listening at ${port}`)
